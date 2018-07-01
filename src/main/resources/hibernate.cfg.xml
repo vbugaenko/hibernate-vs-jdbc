@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">st_contr_admin</property>
+        <property name="hibernate.connection.password">qwerty</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/students_control_db</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.current_session_context_class">
+            org.hibernate.context.internal.ThreadLocalSessionContext
+        </property>
+        <property name="hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">false</property>
+        <mapping class="ru.innopolis.stc9.hibernateVSjdbc.pojo.Agent" />
+        <mapping class="ru.innopolis.stc9.hibernateVSjdbc.pojo.AgentBook" />
+        <mapping class="ru.innopolis.stc9.hibernateVSjdbc.pojo.Page" />
+        <mapping class="ru.innopolis.stc9.hibernateVSjdbc.pojo.AgentForJpa" />
+        <mapping class="ru.innopolis.stc9.hibernateVSjdbc.pojo.AgentBookForJpa" />
+        <mapping class="ru.innopolis.stc9.hibernateVSjdbc.pojo.PageForJpa" />
+    </session-factory>
+</hibernate-configuration>
